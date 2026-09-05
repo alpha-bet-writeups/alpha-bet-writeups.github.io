@@ -1,2 +1,5 @@
 title: "Alpha-Bet Writeups"
 theme: jekyll-theme-hacker
+show_downloads: false
+github:
+  is_project_page: false
