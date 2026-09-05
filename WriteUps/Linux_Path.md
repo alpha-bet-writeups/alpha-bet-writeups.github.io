@@ -5,7 +5,6 @@ category: "Linux / Escalation"
 difficulty: "Beginner"
 date: "2026-09-01"
 description: "A comprehensive beginner-friendly guide to understanding Linux permissions, relative path execution, and PATH Hijacking for privilege escalation."
-tags: Linux,PATH-Hijacking,Privilege-Escalation,Security
 license: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ---
@@ -29,7 +28,7 @@ license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 ![path_Hijacking](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png)
 
-# Part One: Mastering Linux Permissions & Local Exploitation
+
 
 
 ## PATH Hijacking 🎯
