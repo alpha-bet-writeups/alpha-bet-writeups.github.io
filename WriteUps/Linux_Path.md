@@ -1,14 +1,30 @@
 ---
-title: "Part One: Mastering Linux Permissions & Local Exploitation - [PATH Hijacking]"
+title: "PATH Hijacking & Local Privilege Escalation"
 author: "ALPHA-BET"
-category: "Linux & Local Exploitation"
+category: "Linux / Escalation"
 difficulty: "Beginner"
 date: "2026-09-01"
 description: "A comprehensive beginner-friendly guide to understanding Linux permissions, relative path execution, and PATH Hijacking for privilege escalation."
 tags: Linux,PATH-Hijacking,Privilege-Escalation,Security
-image: "https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png"
 license: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+---
+
+> ### 📌 Document Overview
+>
+> | Metadata | Details |
+> | :--- | :--- |
+> | **Title** | PATH Hijacking & Local Privilege Escalation |
+> | **Author** | ALPHA-BET |
+> | **Category** | Linux / Escalation |
+> | **Difficulty** | `Beginner` |
+> | **Date** | 2026-09-01 |
+> | **Tags** | `Linux` `PATH-Hijacking` `Privilege-Escalation` `Security` |
+> | **License** | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+>
+> **Description:**  
+> A comprehensive beginner-friendly guide to understanding Linux permissions, relative path execution, and PATH Hijacking for privilege escalation.
+
 ---
 
 ![path_Hijacking](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png)
