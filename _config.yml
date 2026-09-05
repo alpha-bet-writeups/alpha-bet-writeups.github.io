@@ -1,15 +1,9 @@
-show_downloads: false
-show_metadata: true
-
-theme: jekyll-theme-primer
+theme: jekyll-theme-midnight
 
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
-
-sass:
-  style: compressed
 
 defaults:
   - scope:
@@ -17,5 +11,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      read_time: true
-      toc: true
