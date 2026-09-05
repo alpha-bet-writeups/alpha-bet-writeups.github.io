@@ -13,6 +13,8 @@
 [+] Defense & DFIR   : Digital Forensics, Incident Response & SOC Operations
 [+] Primary Focus    : Penetration Testing & Offensive Security Research
 ```
-### WriteUps:
+### 📝 Featured Writeups & Research
 
-[PATH_Hijacking & privilege escalation](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path)
+| Article Title | Category | Difficulty | Link |
+| :--- | :--- | :---: | :---: |
+| **PATH Hijacking & Local Privilege Escalation** | Linux / Escalation | `Beginner` | [🔗 Read Writeup](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path) |
