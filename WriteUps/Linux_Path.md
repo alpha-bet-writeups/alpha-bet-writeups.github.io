@@ -11,7 +11,10 @@ license: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ---
 
-# Part One: Mastering Linux Permissions & Local Exploitation 🛠️
+[path_Hijacking](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png)
+
+# Part One: Mastering Linux Permissions & Local Exploitation
+
 
 ## PATH Hijacking 🎯
 
@@ -19,47 +22,65 @@ To understand how this vulnerability works, we must talk a little about how Linu
 
 ---
 
+
 ### The Permissions System in Linux 🔐
 
-One of the things you should know is the permissions system in Linux. In Linux, every file and directory has permissions divided into three types: Read (r), Write (w), and Execute (x). These permissions apply to three categories: User (owner), Group, and Others.
+One of the things you should know is the permissions system in Linux.
+In Linux, every file and directory has permissions divided into three types: Read (r), Write (w), and Execute (x).
+These permissions apply to three categories: User (owner), Group, and Others.
 
-When a user executes a program, that program normally runs with the privileges of the user who started it. However, if a high-privilege program (like a SUID binary or a script run by root/another user) executes system commands, it inherits those elevated privileges.
+When a user executes a program, that program normally runs with the privileges of the user who started it.
+However, if a high-privilege program (like a SUID binary or a script run by root/another user) executes system commands,
+it inherits those elevated privileges.
 
 ---
 
+
 ### What is the PATH Environment Variable? 🌐
 
-When you type a command in the terminal like 'ls', 'cat', or 'whoami', the Linux system needs to know where the actual executable binary for that command lives on the disk.
+When you type a command in the terminal like 'ls', 'cat', or 'whoami', 
+the Linux system needs to know where the actual executable binary for that command lives on the disk.
 
-Instead of forcing you to type the full absolute path every time (like /usr/bin/ls), Linux uses an environment variable named $PATH.
+Instead of forcing you to type the full absolute path every time (like /usr/bin/ls),
+Linux uses an environment variable named $PATH.
+
 
 The $PATH variable contains a list of directory paths separated by colons (:), such as:
 
     /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-When you type 'ls', Linux reads $PATH from left to right, checking each directory one by one until it finds an executable file named 'ls', then executes it immediately.
+
+When you type 'ls', Linux reads $PATH from left to right,
+checking each directory one by one until it finds an executable file named 'ls',
+then executes it immediately.
 
 ---
 
+
 ### The Vulnerability: Relative Paths vs Absolute Paths ⚠️
 
-The core flaw occurs when a program or script executes a command using a Relative Path instead of an Absolute Path:
+The core flaw occurs when a program or script executes a command 
+using a Relative Path instead of an Absolute Path:
 
-* Absolute Path (Secure): /usr/bin/ls  
+* Absolute Path (Secure): /usr/bin/ls
   The system goes directly to /usr/bin/ls. It does NOT check $PATH.
   
 * Relative Path (Vulnerable): ls  
   The system searches every directory in $PATH to locate 'ls'.
 
-If a high-privilege program uses a relative path, an attacker can manipulate $PATH to trick the system into executing a fake, malicious version of 'ls' from a directory controlled by the attacker.
+If a high-privilege program uses a relative path,
+an attacker can manipulate $PATH to trick the system into executing a fake,
+malicious version of 'ls' from a directory controlled by the attacker.
 
 ---
+
 
 ### Step-by-Step Exploitation Scenario 🚀
 
 #### Step 1: Enumeration and Finding Target Programs 🔍
 
-First, we inspect home directories and permissions to find files or scripts belonging to our target user:
+First, 
+we inspect home directories and permissions to find files or scripts belonging to our target user:
 
     ls -la /home
 
@@ -74,9 +95,12 @@ Why we do this: We need to see which users exist and check if we have write acce
 
 ---
 
+
 #### Step 2: Identifying the Vulnerability 🧐
 
-Suppose we inspect the target user's environment and configuration files, and we discover that we have write permissions to their shell configuration file (`/home/target/.zshrc`), or that a high-privilege script executes commands relatively without specifying full absolute paths (e.g., calling `ls` instead of `/usr/bin/ls`).
+Suppose we inspect the target user's environment and configuration files,
+and we discover that we have write permissions to their shell configuration file (`/home/target/.zshrc`),
+or that a high-privilege script executes commands relatively without specifying full absolute paths (e.g., calling `ls` instead of `/usr/bin/ls`).
 
 Because commands are called relatively, modifying the `$PATH` variable in the target user's profile will force their shell session to check our directory first.
 
@@ -84,36 +108,55 @@ Because commands are called relatively, modifying the `$PATH` variable in the ta
 
 ---
 
+
 #### Step 3: Creating the Malicious Payload 💣
 
-We create a fake executable file named 'ls' inside a directory where we have full write access, such as /tmp:
+We create a fake executable file named 'ls' inside a directory where we have full write access,
+such as /tmp:
 
     echo '#!/bin/bash' > /tmp/ls
     echo 'chmod +s /bin/bash' >> /tmp/ls
     chmod +x /tmp/ls
 
+
 Command Breakdown:
 - echo '#!/bin/bash' > /tmp/ls : Creates a new script in /tmp named 'ls' with the bash shebang line.
-- echo 'chmod +s /bin/bash' >> /tmp/ls : Appends our payload, which sets the SUID bit on /bin/bash to give us root access.
+
+- echo 'chmod +s /bin/bash' >> /tmp/ls : 
+Appends our payload, which sets the SUID bit on /bin/bash to give us root access.
+
 - chmod +x /tmp/ls : Grants execute (+x) permissions to our fake binary so Linux can run it.
 
-Why we do this: When our fake 'ls' is executed by the privileged user, it will execute our backdoor commands instead of listing files.
+
+Why we do this:
+When our fake 'ls' is executed by the privileged user, it will execute our backdoor commands instead of listing files.
 
 ![Creating Malicious Payload in /tmp](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/img/Creating_Malicious_Payload_in_tmp.PNG)
 
 ---
 
+
 #### Step 4: Hijacking the PATH Variable via .zshrc 💉
 
-Since we found that we have write access to the target user's `.zshrc` file, we append our path modification directly to it instead of just modifying our current shell session. This ensures that whenever the target user logs in or spawns a new shell, our malicious directory is automatically prepended to their `$PATH`:
+Since we found that we have write access to the target user's `.zshrc` file,
+we append our path modification directly to it instead of just modifying our current shell session.
+This ensures that whenever the target user logs in or spawns a new shell,
+our malicious directory is automatically prepended to their `$PATH`:
 
     echo 'export PATH=/tmp:$PATH' >> /home/target/.zshrc
+
 
 Command Breakdown:
 - echo 'export PATH=/tmp:$PATH' : Constructs the export command that places `/tmp` at the very beginning of the `$PATH` lookup chain.
 - >> /home/target/.zshrc : Appends this export line to the end of the target user's `.zshrc` file without overwriting existing configuration lines.
 
-Why we do this: The `.zshrc` file is executed automatically every time the user opens an interactive bash shell. Appending our export command ensures persistent hijacking of their `$PATH` environment variable. When they log in and run `ls` (or run a script that calls `ls`), Linux checks `/tmp` first, finds our malicious script, executes it with their elevated privileges, and ignores `/usr/bin/ls`.
+
+Why we do this:
+The `.zshrc` file is executed automatically every time the user opens an interactive bash shell.
+Appending our export command ensures persistent hijacking of their `$PATH` environment variable.
+When they log in and run `ls` (or run a script that calls `ls`),
+Linux checks `/tmp` first, finds our malicious script,
+executes it with their elevated privileges, and ignores `/usr/bin/ls`.
 
 ![Injecting Hijacked PATH into .zshrc](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/img/Injecting_Hijacked_PATH_into_.zshrc.PNG)
 
@@ -121,11 +164,16 @@ Why we do this: The `.zshrc` file is executed automatically every time the user 
 
 ---
 
+
 #### Step 5: Bypassing Sudo Restrictions via Malicious Alias 🎭
 
-By default, `sudo` strips custom user environment variables and enforces a restricted `secure_path` (such as `/usr/bin`), preventing our hijacked `$PATH` from affecting elevated commands. To force `sudo` to respect our malicious `/tmp` directory, we inject a custom alias into the target user's shell configuration file (`.zshrc`):
+By default, `sudo` strips custom user environment variables and enforces a restricted `secure_path` (such as `/usr/bin`),
+preventing our hijacked `$PATH` from affecting elevated commands.
+To force `sudo` to respect our malicious `/tmp` directory,
+we inject a custom alias into the target user's shell configuration file (`.zshrc`):
 
     echo 'alias sudo="sudo env PATH=$PATH"' >> /home/target/.zshrc
+
 
 Command Breakdown:
 - alias sudo=... : Overrides the default `sudo` binary behavior within the user's interactive shell.
