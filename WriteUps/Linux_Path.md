@@ -11,7 +11,7 @@ license: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ---
 
-[path_Hijacking](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png)
+![path_Hijacking](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/PATH_Hijacking/PATH_Hijacking.png)
 
 # Part One: Mastering Linux Permissions & Local Exploitation
 
