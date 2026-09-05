@@ -13,3 +13,6 @@
 [+] Defense & DFIR   : Digital Forensics, Incident Response & SOC Operations
 [+] Primary Focus    : Penetration Testing & Offensive Security Research
 ```
+### WriteUps:
+
+[PATH_Hijacking & privilege escalation](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path)
