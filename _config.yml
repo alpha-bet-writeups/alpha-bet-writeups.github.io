@@ -1,15 +1,20 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-hacker
+
+title: ""
+description: ""
+show_downloads: false
 
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
-  
 
 github:
   is_project_page: false
   is_user_page: true
   repository_url: ""
+  owner_name: ""
+  owner_url: ""
 
 defaults:
   - scope:
