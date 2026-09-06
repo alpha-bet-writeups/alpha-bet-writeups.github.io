@@ -1,6 +1,4 @@
 theme: jekyll-theme-midnight
-title: ""
-description: ""
 
 kramdown:
   input: GFM
