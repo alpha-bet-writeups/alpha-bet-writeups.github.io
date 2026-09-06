@@ -4,18 +4,14 @@
 @import "{{ site.theme }}";
 
 
-.credits,
-span.credits,
-.credits.left,
-.credits.right,
-footer .credits,
-header .credits {
+header p.view,
+header ul,
+header span.credits,
+header .credits.left,
+header .credits.right {
   display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-
-hr {
-  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
