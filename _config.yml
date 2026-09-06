@@ -1,9 +1,12 @@
 theme: jekyll-theme-midnight
+title: ""
+description: ""
 
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+  
 
 github:
   is_project_page: false
