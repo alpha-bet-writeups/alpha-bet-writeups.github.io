@@ -3,6 +3,19 @@
 
 @import "{{ site.theme }}";
 
-.credits {
+
+.credits,
+span.credits,
+.credits.left,
+.credits.right,
+footer .credits,
+header .credits {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+
+hr {
   display: none !important;
 }
