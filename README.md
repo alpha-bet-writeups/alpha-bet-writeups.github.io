@@ -17,4 +17,4 @@
 
 | Article Title | Category | Difficulty | Link |
 | :--- | :--- | :---: | :---: |
-| **PATH Hijacking & Local Privilege Escalation** | Linux / Escalation | `Beginner` | [🔗 Read Writeup](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path) |
+| **PATH Hijacking & Local Privilege Escalation** | Linux / Escalation | `Beginner` | [🔗 Read ](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path) |
