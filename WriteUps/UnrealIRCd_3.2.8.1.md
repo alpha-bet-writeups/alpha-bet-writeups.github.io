@@ -1,3 +1,34 @@
+---
+title: "UnrealIRCd 3.2.8.1 Backdoor Exploitation Guide"
+author: "ALPHA-BET"
+category: "Vulnerabilities / Exploitation"
+difficulty: "Intermediate"
+date: "2026-09-09"
+description: "A comprehensive manual guide to understanding and exploiting the UnrealIRCd 3.2.8.1 backdoor and spawning an interactive reverse shell."
+license: "CC BY-NC-SA 4.0"
+license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+---
+
+> ### Document Overview
+>
+> | Metadata | Details |
+> | :--- | :--- |
+> | **Title** | UnrealIRCd 3.2.8.1 Backdoor Exploitation Guide |
+> | **Author** | ALPHA-BET |
+> | **Category** | Vulnerabilities / Exploitation |
+> | **Difficulty** | `Intermediate` |
+> | **Date** | 2026-09-09 |
+> | **Tags** | `UnrealIRCd` `Backdoor` `Command-Injection` `Reverse-Shell` |
+> | **License** | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+>
+> **Description:**  
+> A comprehensive manual guide to understanding and exploiting the UnrealIRCd 3.2.8.1 backdoor and spawning an interactive reverse shell.
+
+---
+
+![UnrealIRCd_3.2.8.1](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/UnrealIRCd_3.2.8.1.PNG)
+
+
 # UnrealIRCd 3.2.8.1 Vulnerability & Exploitation Guide
 
 ## 🌐 What is UnrealIRCd?
@@ -82,11 +113,11 @@ Before we create the reverse shell, we must create our listening method. Now we 
 nc -nvlp 5050
 ```
 Why are we doing this? And what does this command mean?
-* nc: Netcat utility.
-* -n: Numeric-only IP addresses.
-* -v: Verbose output.
-* -l: Listen mode to wait for incoming connections.
-* -p 5050: Specifies the local port to monitor.
+* `nc `: Netcat utility.
+* `-n `: Numeric-only IP addresses.
+* `-v `: Verbose output.
+* `-l `: Listen mode to wait for incoming connections.
+* `-p 5050 `: Specifies the local port to monitor.
 
 ![local_listener_netcat_port_5050.png]()
 
