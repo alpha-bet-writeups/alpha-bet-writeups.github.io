@@ -3,6 +3,7 @@ theme: jekyll-theme-Midnight
 title: "Alpha-Bet"
 description: ""
 show_downloads: false
+favicon: /favicon.ico
 
 kramdown:
   input: GFM
@@ -12,9 +13,9 @@ kramdown:
 github:
   is_project_page: false
   is_user_page: true
-  repository_url: ""
+  repository_url: "https://alpha-bet-writeups.github.io/"
   owner_name: ""
-  owner_url: ""
+  owner_url: "https://alpha-bet-writeups.github.io/"
 
 defaults:
   - scope:
