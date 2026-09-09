@@ -3,7 +3,7 @@ theme: jekyll-theme-Midnight
 title: "Alpha-Bet"
 description: ""
 show_downloads: false
-favicon: /favicon.ico
+favicon: /favicon.png
 
 kramdown:
   input: GFM
