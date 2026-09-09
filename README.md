@@ -18,3 +18,4 @@
 | Article Title | Category | Difficulty | Link |
 | :--- | :--- | :---: | :---: |
 | **PATH Hijacking & Local Privilege Escalation** | Linux / Escalation | `Beginner` | [🔗 Read ](https://alpha-bet-writeups.github.io/WriteUps/Linux_Path) |
+| **UnrealIRCd 3.2.8.1 Backdoor** | Vulnerabilities / Exploitation | `Intermediate` | [🔗 Read ](https://alpha-bet-writeups.github.io/WriteUps/UnrealIRCd_3.2.8.1) |
