@@ -1,7 +1,7 @@
 # > root@alpha-bet:~# whoami
 
 > **Security Researcher & Penetration Tester & Security Tools Developer**  
-> Focus: Network Infrastructure Vulnerabilities, Active Directory Security, Digital Forensics & Incident Response (DFIR).
+> Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
 
 ---
 
