@@ -1,4 +1,4 @@
-# > root@alpha-bet:~# whoami
+# > root@alpha-bet:~# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=12AC44&width=435&lines=whoami)](https://git.io/typing-svg)
 
 > **Security Researcher & Penetration Tester & Security Tools Developer**  
 > Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
