@@ -1,6 +1,4 @@
-# > root@alpha-bet:~# <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=4000&pause=1500&color=00FF66&center=true&vCenter=true&width=700&lines=I+don%27t+break+the+system%2C+I+am+the+system.;root%40alpha-bet%3A~%23+access_level%3A+unrestricted;Infrastructure+isn%27t+tested%2C+it%27s+conquered." alt="Typing SVG" />
-</p>
+# > root@alpha-bet:~# <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2000&pause=1000&color=00FF66&vCenter=true&lines=whoami" alt="whoami" />
 
 > **Security Researcher & Penetration Tester & Security Tools Developer**  
 > Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
