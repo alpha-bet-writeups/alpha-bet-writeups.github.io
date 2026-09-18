@@ -1,7 +1,8 @@
-# <table><tr><td>root@alpha-bet:~#</td><td><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=2000&pause=1000&color=00FF66&vCenter=true&lines=whoami" alt="whoami" /></td></tr></table>style="vertical-align: -4px;" />
+# > root@alpha-bet:~# whoami
 
-> **Security Researcher & Penetration Tester & Security Tools Developer**  
-> Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=4000&pause=1500&color=00FF66&center=true&vCenter=true&width=800&lines=Security+Researcher+%26+Penetration+Tester+%26+Security+Tools+Developer;Focus%3A+Network+Infrastructure+Vulnerabilities%2C+Active+Directory+Security." alt="Typing SVG" />
+</p>
 
 ---
 
