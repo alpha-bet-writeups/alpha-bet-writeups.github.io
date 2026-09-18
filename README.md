@@ -1,4 +1,4 @@
-# > root@alpha-bet:~# <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2000&pause=1000&color=00FF66&vCenter=true&lines=whoami" alt="whoami" />
+# > root@alpha-bet:~# <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2000&pause=1000&color=00FF66&vCenter=true&lines=whoami" alt="whoami" style="vertical-align: -4px;" />
 
 > **Security Researcher & Penetration Tester & Security Tools Developer**  
 > Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
