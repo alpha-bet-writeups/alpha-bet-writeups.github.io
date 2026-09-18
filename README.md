@@ -1,8 +1,7 @@
 # > root@alpha-bet:~# whoami
 
-<p align="center" style="line-height: 1.1;">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=5000&pause=3000&color=2E8B57&center=true&vCenter=true&width=800&lines=+%C2%A0+%C2%A0+Security+Researcher+%26+Penetration+Tester+%26+Security+Tools+Developer" alt="Line 1" /><br style="content: ''; margin: -5px; display: block;" />
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=5000&pause=3000&color=2E8B57&center=true&vCenter=true&width=800&lines=+%C2%A0+%C2%A0+Focus%3A+Network+Infrastructure+Vulnerabilities%2C+Active+Directory+Security." alt="Line 2" />
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=5000&pause=3000&color=2E8B57&center=true&vCenter=true&width=800&lines=+%C2%A0+%C2%A0+Security+Researcher+%26+Penetration+Tester+%26+Security+Tools+Developer;+%C2%A0+%C2%A0+Focus%3A+Network+Infrastructure+Vulnerabilities%2C+Active+Directory+Security." alt="Typing SVG" />
 </p>
 
 ---
