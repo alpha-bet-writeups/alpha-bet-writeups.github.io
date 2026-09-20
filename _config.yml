@@ -1,9 +1,14 @@
 theme: jekyll-theme-Midnight
 
 title: "Alpha-Bet"
-description: ""
+description: "Expert cybersecurity write-ups focusing on infrastructure penetration testing, manual exploitation, real-world vulnerabilities, backdoors, privilege escalation, networking, and server security. Proficient in Python, Ruby, and Assembly."
 show_downloads: false
 favicon: /favicon.ico
+
+author:
+  name: "Alpha-Bet"
+
+keywords: "Infrastructure Penetration Testing, Manual Exploitation, Real Vulnerabilities, Backdoors, Privilege Escalation, Network Security, Python, Ruby, Assembly, CTF Write-ups, Cybersecurity"
 
 kramdown:
   input: GFM
@@ -23,3 +28,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+plugins:
+  - jekyll-seo-tag
