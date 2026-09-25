@@ -18,9 +18,9 @@ kramdown:
 github:
   is_project_page: false
   is_user_page: true
-  repository_url: "https://alpha-bet-writeups.github.io/"
+  repository_url: "https://github.com/alpha-bet-404"
   owner_name: "Alpha-Bet"
-  owner_url: "https://alpha-bet-writeups.github.io/"
+  owner_url: "https://github.com/alpha-bet-404"
 
 defaults:
   - scope:
