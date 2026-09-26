@@ -1,6 +1,6 @@
 # > root@alpha-bet:~# whoami
 
-> **Security Researcher & Penetration Tester & Security Tools Developer**  
+> **Security Researcher &  infrastructure penetration testing**  
 > Focus: Network Infrastructure Vulnerabilities, Active Directory Security.
 ---
 
