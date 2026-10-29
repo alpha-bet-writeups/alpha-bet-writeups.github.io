@@ -12,13 +12,12 @@
 [+] Defense & DFIR   : Digital Forensics, Incident Response & SOC Operations
 [+] Primary Focus    : infrastructure penetration testing & Offensive Security
 ```
----
-
+<div align="center">
 ## 📬 Secure Communication
 
 If you want to communicate with me securely, you can download my public GPG key below and send your encrypted messages to: **alpha-bet@tutamail.com**
-
 [![Download GPG Key](https://img.shields.io/badge/Download-GPG_Key-blue?style=for-the-badge&logo=key&logoColor=white)]()
+</div>
 
 ### 📝 Featured Writeups & Research
 
