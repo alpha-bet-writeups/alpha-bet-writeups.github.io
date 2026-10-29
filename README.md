@@ -20,11 +20,13 @@ If you want to communicate with me <b>securely</b>, you can download my public G
 
 <br><br>
 
-<a href="">
+<a href="https://raw.githubusercontent.com/alpha-bet-writeups/alpha-bet-writeups.github.io/main/Alpha-Bet-PUBLIC-KEY.asc">
   <img src="https://img.shields.io/badge/Download-GPG_Key-blue?style=for-the-badge&logo=key&logoColor=white" alt="Download GPG Key">
 </a>
 
 </div>
+
+
 
 ### 📝 Featured Writeups & Research
 
