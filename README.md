@@ -19,7 +19,9 @@
 If you want to communicate with me securely,
 you can download my public GPG key below and send your encrypted messages to: **alpha-bet@tutamail.com**
 
-[![Download GPG Key](https://img.shields.io/badge/Download-GPG_Key-blue?style=for-the-badge&logo=key&logoColor=white)]()
+<a href="">
+  <img src="https://img.shields.io/badge/Download-GPG_Key-blue?style=for-the-badge&logo=key&logoColor=white" alt="Download GPG Key">
+</a>
 
 </div>
 
