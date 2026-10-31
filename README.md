@@ -1,4 +1,4 @@
-![Site Visits](https://komarev.com/ghpvc/?username=alpha-bet-writeups&label=Site%20Visits&color=blue)
+![Visits](https://visitor-badge.laobi.icu/badge?page_id=alpha-bet)
 
 # > root@alpha-bet:~# whoami
 
